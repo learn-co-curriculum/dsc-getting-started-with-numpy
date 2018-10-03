@@ -96,6 +96,73 @@ x + 2 #Adds two to each element
     TypeError: can only concatenate list (not "int") to list
 
 
+# Even more math!
+
+## Scalar Math
+
+* np.add(arr,1) | Add 1 to each array element
+* np.subtract(arr,2) | Subtract 2 from each array element
+* np.multiply(arr,3) | Multiply each array element by 3
+* np.divide(arr,4) | Divide each array element by 4 (returns np.nan for division by zero)
+* np.power(arr,5) | Raise each array element to the 5th power  
+  
+## Vector Math
+
+* np.add(arr1,arr2) | Elementwise add arr2 to arr1
+* np.subtract(arr1,arr2) | Elementwise subtract arr2 from arr1
+* np.multiply(arr1,arr2) | Elementwise multiply arr1 by arr2
+* np.divide(arr1,arr2) | Elementwise divide arr1 by arr2
+* np.power(arr1,arr2) | Elementwise raise arr1 raised to the power of arr2
+* np.array_equal(arr1,arr2) | Returns True if the arrays have the same elements and shape
+* np.sqrt(arr) | Square root of each element in the array
+* np.sin(arr) | Sine of each element in the array
+* np.log(arr) | Natural log of each element in the array
+* np.abs(arr) | Absolute value of each element in the array
+* np.ceil(arr) | Rounds up to the nearest int
+* np.floor(arr) | Rounds down to the nearest int
+* np.round(arr) | Rounds to the nearest int
+
+#### Here's a few more examples from the list abovem
+
+
+```python
+[1,2,3] + [4,5,6] #Adding raw lists is just appending
+```
+
+
+
+
+    [1, 2, 3, 4, 5, 6]
+
+
+
+
+```python
+np.array([1,2,3]) + np.array([4,5,6]) #Adds elements
+```
+
+
+
+
+    array([5, 7, 9])
+
+
+
+
+```python
+#Same as above with built in method
+x = np.array([1,2,3])
+y = np.array([4,5,6])
+np.add(x,y)
+```
+
+
+
+
+    array([5, 7, 9])
+
+
+
 # Multidimensional Arrays
 NumPy arrays are also very useful for storing multidimensional data such as matrices. Notice how NumPy tries to nicely allign the elements.
 
