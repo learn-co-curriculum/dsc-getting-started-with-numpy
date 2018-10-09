@@ -1,33 +1,30 @@
 
-# Introducing NumPy
+# Getting Started with NumPy
+
+## Introduction
 
 NumPy is one of the main libraries for performing scientific computing in Python. Using NumPy, you can create high-performance multi-dimensional arrays, and several tools to work with these arrays. 
 
 A numpy array can store a grid of values. All the values must be of the same type. numpy arrays are n-dimensional, and the number of dimensions is denoted the *rank* of the numpy array. The shape of an array is a tuple of integers which hold the size of the array along each of the dimensions.
 
-For more information on numpy, we refer to http://www.numpy.org/.
+For more information on NumPy, we refer to http://www.numpy.org/.
 
 
 ## Objectives
-* Know that numpy is imported as np: import numpy as np
-* Understand how to initialize numpy arrays from nested Python lists, and access elements using square brackets
-* Understand the shape attribute on numpy arrays
-* Understand how to create arrays from scratch including Np.zeros, np.ones, np.full
-* Learn how to do indexing in arrays
-    * Slicing
-    * Integer indexing
-    * Boolean indexing
+* Understand how to initialize NumPy arrays from nested Python lists, and access elements using square brackets
+* Understand the shape attribute on NumPy arrays
+* Understand how to create arrays from scratch including np.zeros, np.ones, np.full
 * Learn to perform scalar and vector math  
 
-To work with NumPy arrays, you should import `numpy` first.  
-**The naming convention for `numpy` is to import it as `np`.**
+## NumPy array creation and basic operations
+
+First, remember how the naming for NumPy is to import it as `np`.
 
 
 ```python
 import numpy as np
 ```
 
-## Numpy array creation and basic operations
 One easy way to create a numpy array is from a python list. The two are similar in a number of manners but NumPy is optimized in a number of ways for performing mathematical operations, including having a number of built in methods that will be extraordinarily useful.
 
 
@@ -39,7 +36,7 @@ print(type(x))
     <class 'numpy.ndarray'>
 
 
-# Broadcasting Mathematical Operations
+## Broadcasting Mathematical Operations
 
 Notice right off the bat how basic mathematical operations will be applied element wise in a NumPy array versus a literal interpretation with a python list:
 
@@ -89,16 +86,16 @@ x + 2 #Adds two to each element
 
     TypeError                                 Traceback (most recent call last)
 
-    <ipython-input-7-e2d4447f4589> in <module>()
-    ----> 1 [1,2,3] + 2
+    <ipython-input-6-b531f5f7b60f> in <module>()
+    ----> 1 [1,2,3] + 2 # Returns an error; different data types
     
 
     TypeError: can only concatenate list (not "int") to list
 
 
-# Even more math!
+## Even more math!
 
-## Scalar Math
+### Scalar Math
 
 * np.add(arr,1) | Add 1 to each array element
 * np.subtract(arr,2) | Subtract 2 from each array element
@@ -106,7 +103,7 @@ x + 2 #Adds two to each element
 * np.divide(arr,4) | Divide each array element by 4 (returns np.nan for division by zero)
 * np.power(arr,5) | Raise each array element to the 5th power  
   
-## Vector Math
+### Vector Math
 
 * np.add(arr1,arr2) | Elementwise add arr2 to arr1
 * np.subtract(arr1,arr2) | Elementwise subtract arr2 from arr1
@@ -122,7 +119,7 @@ x + 2 #Adds two to each element
 * np.floor(arr) | Rounds down to the nearest int
 * np.round(arr) | Rounds to the nearest int
 
-#### Here's a few more examples from the list abovem
+#### Here's a few more examples from the list above
 
 
 ```python
@@ -163,7 +160,7 @@ np.add(x,y)
 
 
 
-# Multidimensional Arrays
+## Multidimensional Arrays
 NumPy arrays are also very useful for storing multidimensional data such as matrices. Notice how NumPy tries to nicely allign the elements.
 
 
@@ -203,7 +200,7 @@ y
 
 
 
-# The Shape Attribute
+## The Shape Attribute
 One of the most important attributes to understand with this is the shape of a NumPy array.
 
 
@@ -283,7 +280,7 @@ y
 
 
 
-# Built in Methods for Creating Arrays
+## Built in Methods for Creating Arrays
 NumPy also has several built in methods for creating arrays that are useful in practice. In particular these methods are particularly useful:
 * np.zeros(shape) 
 * np.ones(shape)
@@ -297,7 +294,7 @@ np.zeros(5) #one dimensional; 5 elements
 
 
 
-    array([ 0.,  0.,  0.,  0.,  0.])
+    array([0., 0., 0., 0., 0.])
 
 
 
@@ -309,8 +306,8 @@ np.zeros([2,2]) #two dimensional; 2x2 matrix
 
 
 
-    array([[ 0.,  0.],
-           [ 0.,  0.]])
+    array([[0., 0.],
+           [0., 0.]])
 
 
 
@@ -322,9 +319,9 @@ np.zeros([3,5]) #2 dimensional;  3x5 matrix
 
 
 
-    array([[ 0.,  0.,  0.,  0.,  0.],
-           [ 0.,  0.,  0.,  0.,  0.],
-           [ 0.,  0.,  0.,  0.,  0.]])
+    array([[0., 0., 0., 0., 0.],
+           [0., 0., 0., 0., 0.],
+           [0., 0., 0., 0., 0.]])
 
 
 
@@ -336,24 +333,24 @@ np.zeros([3,4,5]) #3 dimensional; 3 4x5 matrices
 
 
 
-    array([[[ 0.,  0.,  0.,  0.,  0.],
-            [ 0.,  0.,  0.,  0.,  0.],
-            [ 0.,  0.,  0.,  0.,  0.],
-            [ 0.,  0.,  0.,  0.,  0.]],
+    array([[[0., 0., 0., 0., 0.],
+            [0., 0., 0., 0., 0.],
+            [0., 0., 0., 0., 0.],
+            [0., 0., 0., 0., 0.]],
     
-           [[ 0.,  0.,  0.,  0.,  0.],
-            [ 0.,  0.,  0.,  0.,  0.],
-            [ 0.,  0.,  0.,  0.,  0.],
-            [ 0.,  0.,  0.,  0.,  0.]],
+           [[0., 0., 0., 0., 0.],
+            [0., 0., 0., 0., 0.],
+            [0., 0., 0., 0., 0.],
+            [0., 0., 0., 0., 0.]],
     
-           [[ 0.,  0.,  0.,  0.,  0.],
-            [ 0.,  0.,  0.,  0.,  0.],
-            [ 0.,  0.,  0.,  0.,  0.],
-            [ 0.,  0.,  0.,  0.,  0.]]])
+           [[0., 0., 0., 0., 0.],
+            [0., 0., 0., 0., 0.],
+            [0., 0., 0., 0., 0.],
+            [0., 0., 0., 0., 0.]]])
 
 
 
-##### Similarly the np.ones() method returns an array of ones
+### Similarly the np.ones() method returns an array of ones
 
 
 ```python
@@ -363,7 +360,7 @@ np.ones(5)
 
 
 
-    array([ 1.,  1.,  1.,  1.,  1.])
+    array([1., 1., 1., 1., 1.])
 
 
 
@@ -375,13 +372,13 @@ np.ones([3,4])
 
 
 
-    array([[ 1.,  1.,  1.,  1.],
-           [ 1.,  1.,  1.,  1.],
-           [ 1.,  1.,  1.,  1.]])
+    array([[1., 1., 1., 1.],
+           [1., 1., 1., 1.],
+           [1., 1., 1., 1.]])
 
 
 
-##### The generalization of this is the np.full() method which allows you to create an array of arbitrary values.
+### The np.full() method allows you to create an array of arbitrary values
 
 
 ```python
@@ -418,17 +415,17 @@ np.full([2,5], range(10))
 
     ValueError                                Traceback (most recent call last)
 
-    <ipython-input-44-acc44367711c> in <module>()
+    <ipython-input-24-4dfd668a5ec0> in <module>()
           1 #Sadly this trick won't work for multidimensional arrays
     ----> 2 np.full([2,5], range(10))
     
 
-    ~\Anaconda3wenv\lib\site-packages\numpy\core\numeric.py in full(shape, fill_value, dtype, order)
-        301         dtype = array(fill_value).dtype
-        302     a = empty(shape, dtype, order)
-    --> 303     multiarray.copyto(a, fill_value, casting='unsafe')
-        304     return a
-        305 
+    ~/anaconda3/lib/python3.6/site-packages/numpy/core/numeric.py in full(shape, fill_value, dtype, order)
+        297         dtype = array(fill_value).dtype
+        298     a = empty(shape, dtype, order)
+    --> 299     multiarray.copyto(a, fill_value, casting='unsafe')
+        300     return a
+        301 
 
 
     ValueError: could not broadcast input array from shape (10) into shape (2,5)
@@ -442,8 +439,8 @@ np.full([2,5], np.pi) #NumPy also has useful built in mathematical numbers
 
 
 
-    array([[ 3.14159265,  3.14159265,  3.14159265,  3.14159265,  3.14159265],
-           [ 3.14159265,  3.14159265,  3.14159265,  3.14159265,  3.14159265]])
+    array([[3.14159265, 3.14159265, 3.14159265, 3.14159265, 3.14159265],
+           [3.14159265, 3.14159265, 3.14159265, 3.14159265, 3.14159265]])
 
 
 
@@ -563,7 +560,7 @@ x[:,0]
 
     TypeError                                 Traceback (most recent call last)
 
-    <ipython-input-67-01770d3fab0a> in <module>()
+    <ipython-input-33-879a04ce8a40> in <module>()
     ----> 1 x[:,0]
     
 
@@ -644,10 +641,6 @@ x[:,:,-1]
 
 
 
-# Sources
+## Summary
 
-http://cs231n.github.io/python-numpy-tutorial/#numpy
-
-http://www.numpy.org/
-
-https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-1-python-basics?ex=1
+Great! You learned about a bunch of NumPy commands. Now, let's move over to the lab to put your new skills into practice!
