@@ -11,6 +11,9 @@ For more information on NumPy, we refer to http://www.numpy.org/.
 
 
 ## Objectives
+
+You will be able to:
+
 * Understand how to initialize NumPy arrays from nested Python lists, and access elements using square brackets
 * Understand the shape attribute on NumPy arrays
 * Understand how to create arrays from scratch including np.zeros, np.ones, np.full
