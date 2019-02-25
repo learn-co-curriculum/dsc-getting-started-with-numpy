@@ -164,7 +164,7 @@ np.add(x,y)
 
 
 ## Multidimensional Arrays
-NumPy arrays are also very useful for storing multidimensional data such as matrices. Notice how NumPy tries to nicely allign the elements.
+NumPy arrays are also very useful for storing multidimensional data such as matrices. Notice how NumPy tries to nicely align the elements.
 
 
 ```python
