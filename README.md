@@ -122,7 +122,7 @@ x + 2 #Adds two to each element
 * np.floor(arr) | Rounds down to the nearest int
 * np.round(arr) | Rounds to the nearest int
 
-#### Here's a few more examples from the list above
+### Here's a few more examples from the list above
 
 
 ```python
@@ -256,7 +256,7 @@ y
 
 
 ### We can also have higher dimensional data such as working with 3 dimensional data
-<img src="3d_array2.png" width=500>
+<img src="images/3d_array2.png" width=500>
 
 
 ```python
@@ -283,11 +283,11 @@ y
 
 
 
-## Built in Methods for Creating Arrays
+## Built-in Methods for Creating Arrays
 NumPy also has several built in methods for creating arrays that are useful in practice. In particular these methods are particularly useful:
-* np.zeros(shape) 
-* np.ones(shape)
-* np.full(shape, fill)
+* `np.zeros(shape)` 
+* `np.ones(shape)`
+* `np.full(shape, fill)`
 
 
 ```python
@@ -353,7 +353,7 @@ np.zeros([3,4,5]) #3 dimensional; 3 4x5 matrices
 
 
 
-### Similarly the np.ones() method returns an array of ones
+### Similarly the `np.ones()` method returns an array of ones
 
 
 ```python
@@ -381,7 +381,7 @@ np.ones([3,4])
 
 
 
-### The np.full() method allows you to create an array of arbitrary values
+### The `np.full()` method allows you to create an array of arbitrary values
 
 
 ```python
