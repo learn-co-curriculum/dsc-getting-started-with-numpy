@@ -256,7 +256,7 @@ y
 
 
 ### We can also have higher dimensional data such as working with 3 dimensional data
-<img src="images/3d_array2.png" width=500>
+<img src="images/Image_195_3D array.png" width=500>
 
 
 ```python
