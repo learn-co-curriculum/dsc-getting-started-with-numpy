@@ -5,7 +5,7 @@
 
 NumPy is one of the main libraries for performing scientific computing in Python. Using NumPy, you can create high-performance multi-dimensional arrays, and several tools to work with these arrays. 
 
-A numpy array can store a grid of values. All the values must be of the same type. numpy arrays are n-dimensional, and the number of dimensions is denoted the *rank* of the numpy array. The shape of an array is a tuple of integers which hold the size of the array along each of the dimensions.
+A NumPy array can store a grid of values. All the values must be of the same type. NumPy arrays are n-dimensional, and the number of dimensions is denoted the *rank* of the NumPy array. The shape of an array is a tuple of integers which hold the size of the array along each of the dimensions.
 
 For more information on NumPy, we refer to http://www.numpy.org/.
 
@@ -14,7 +14,7 @@ For more information on NumPy, we refer to http://www.numpy.org/.
 
 You will be able to:
 
-* Understand how to initialize NumPy arrays from nested Python lists, and access elements using square brackets
+* Understand how to initialize NumPy arrays from nested Python lists and access elements using square brackets
 * Understand the shape attribute on NumPy arrays
 * Understand how to create arrays from scratch including np.zeros, np.ones, np.full
 * Learn to perform scalar and vector math  
