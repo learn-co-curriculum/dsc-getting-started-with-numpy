@@ -14,10 +14,10 @@ For more information on NumPy, refer to http://www.numpy.org/.
 
 You will be able to:
 
-* Understand how to initialize NumPy arrays from nested Python lists and access elements using square brackets 
-* Understand the shape attribute of NumPy arrays 
-* Understand how to create arrays from scratch including `np.zeros()`, `np.ones()`, `np.full()` 
-* Learn to perform scalar and vector math  
+- Understand how to initialize NumPy arrays from nested Python lists and access elements using square brackets 
+- Understand the shape attribute of NumPy arrays 
+- Understand how to create arrays from scratch including `np.zeros()`, `np.ones()`, `np.full()` 
+- Learn to perform scalar and vector math  
 
 ## NumPy array creation and basic operations
 
@@ -41,7 +41,7 @@ print(type(x))
 
 ## Broadcasting Mathematical Operations
 
-Notice right off the bat how basic mathematical operations will be applied element wise in a NumPy array versus a literal interpretation with a Python list:
+Notice right off the bat how basic mathematical operations will be applied elementwise in a NumPy array versus a literal interpretation with a Python list:
 
 
 ```python
@@ -456,7 +456,7 @@ np.full([2,5], np.pi) #NumPy also has useful built-in mathematical numbers
 
 ## Numpy array subsetting
 
-You can subset NumPy arrays very similar to list slicing in python.
+You can subset NumPy arrays very similarly to list slicing in python.
 
 
 ```python
