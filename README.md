@@ -13,11 +13,14 @@ For more information on NumPy, refer to http://www.numpy.org/.
 ## Objectives
 
 You will be able to:
+  
+- Use broadcasting to perform a math operation on an entire numpy array    
+- Perform vector and matrix operations with numpy 
+- Access the shape of a numpy array    
+- Use indexing with numpy arrays    
 
-- Understand how to initialize NumPy arrays from nested Python lists and access elements using square brackets 
-- Understand the shape attribute of NumPy arrays 
-- Understand how to create arrays from scratch including `np.zeros()`, `np.ones()`, `np.full()` 
-- Learn to perform scalar and vector math  
+
+
 
 ## NumPy array creation and basic operations
 
@@ -32,7 +35,7 @@ One easy way to create a numpy array is from a Python list. The two are similar 
 
 
 ```python
-x = np.array([1,2,3])
+x = np.array([1, 2, 3])
 print(type(x))
 ```
 
@@ -45,7 +48,8 @@ Notice right off the bat how basic mathematical operations will be applied eleme
 
 
 ```python
-x * 3 #multiplies each element by 3
+# Multiplies each element by 3
+x * 3 
 ```
 
 
@@ -57,7 +61,8 @@ x * 3 #multiplies each element by 3
 
 
 ```python
-[1,2,3] * 3 #returns the list 3 times
+# Returns the list 3 times
+[1, 2, 3] * 3 
 ```
 
 
@@ -69,7 +74,8 @@ x * 3 #multiplies each element by 3
 
 
 ```python
-x + 2 #Adds two to each element
+# Adds two to each element
+x + 2 
 ```
 
 
@@ -81,7 +87,8 @@ x + 2 #Adds two to each element
 
 
 ```python
-[1,2,3] + 2 # Returns an error; different data types
+# Returns an error; different data types
+[1, 2, 3] + 2 
 ```
 
 
@@ -89,8 +96,9 @@ x + 2 #Adds two to each element
 
     TypeError                                 Traceback (most recent call last)
 
-    <ipython-input-6-b531f5f7b60f> in <module>()
-    ----> 1 [1,2,3] + 2 # Returns an error; different data types
+    <ipython-input-6-b2ec0299a1e2> in <module>
+          1 # Returns an error; different data types
+    ----> 2 [1, 2, 3] + 2
     
 
     TypeError: can only concatenate list (not "int") to list
@@ -133,7 +141,8 @@ x + 2 #Adds two to each element
 
 
 ```python
-[1,2,3] + [4,5,6] #Adding raw lists is just appending
+# Adding raw lists is just appending
+[1, 2, 3] + [4, 5, 6] 
 ```
 
 
@@ -145,7 +154,8 @@ x + 2 #Adds two to each element
 
 
 ```python
-np.array([1,2,3]) + np.array([4,5,6]) #Adds elements
+# Adds elements
+np.array([1, 2, 3]) + np.array([4, 5, 6]) 
 ```
 
 
@@ -157,10 +167,10 @@ np.array([1,2,3]) + np.array([4,5,6]) #Adds elements
 
 
 ```python
-#Same as above with built-in method
-x = np.array([1,2,3])
-y = np.array([4,5,6])
-np.add(x,y)
+# Same as above with built-in method
+x = np.array([1, 2, 3])
+y = np.array([4, 5, 6])
+np.add(x, y)
 ```
 
 
@@ -175,8 +185,8 @@ NumPy arrays are also very useful for storing multidimensional data such as matr
 
 
 ```python
-#An ordinary nested list
-y = [[1,2], [3,4]]
+# An ordinary nested list
+y = [[1, 2], [3, 4]]
 print(type(y))
 y
 ```
@@ -193,8 +203,8 @@ y
 
 
 ```python
-#Reformatted as a NumPy array
-y = np.array([[1,2], [3,4]])
+# Reformatted as a NumPy array
+y = np.array([[1, 2], [3, 4]])
 print(type(y))
 y
 ```
@@ -227,7 +237,7 @@ y.shape
 
 
 ```python
-y = np.array([[1,2,3],[4,5,6]])
+y = np.array([[1, 2, 3],[4, 5, 6]])
 print(y.shape)
 y
 ```
@@ -245,7 +255,7 @@ y
 
 
 ```python
-y = np.array([[1,2],[3,4],[5,6]])
+y = np.array([[1, 2],[3, 4],[5, 6]])
 print(y.shape)
 y
 ```
@@ -267,8 +277,8 @@ y
 
 
 ```python
-y = np.array([[[1,2],[3,4],[5,6]],
-             [[1,2],[3,4],[5,6]]
+y = np.array([[[1, 2],[3, 4],[5, 6]],
+             [[1, 2],[3, 4],[5, 6]]
              ])
 print(y.shape)
 y
@@ -298,7 +308,8 @@ NumPy also has several built-in methods for creating arrays that are useful in p
 
 
 ```python
-np.zeros(5) #one dimensional; 5 elements
+# One dimensional; 5 elements
+np.zeros(5)  
 ```
 
 
@@ -310,7 +321,8 @@ np.zeros(5) #one dimensional; 5 elements
 
 
 ```python
-np.zeros([2,2]) #two dimensional; 2x2 matrix
+# Two dimensional; 2x2 matrix
+np.zeros([2, 2]) 
 ```
 
 
@@ -323,7 +335,8 @@ np.zeros([2,2]) #two dimensional; 2x2 matrix
 
 
 ```python
-np.zeros([3,5]) #2 dimensional;  3x5 matrix
+# 2 dimensional;  3x5 matrix
+np.zeros([3, 5]) 
 ```
 
 
@@ -337,7 +350,8 @@ np.zeros([3,5]) #2 dimensional;  3x5 matrix
 
 
 ```python
-np.zeros([3,4,5]) #3 dimensional; 3 4x5 matrices
+# 3 dimensional; 3 4x5 matrices
+np.zeros([3, 4, 5]) 
 ```
 
 
@@ -376,7 +390,7 @@ np.ones(5)
 
 
 ```python
-np.ones([3,4])
+np.ones([3, 4])
 ```
 
 
@@ -392,7 +406,8 @@ np.ones([3,4])
 
 
 ```python
-np.full(5, 3) #Create a 1d array with 5 elements, all of which are 3
+# Create a 1d array with 5 elements, all of which are 3
+np.full(5, 3) 
 ```
 
 
@@ -404,7 +419,8 @@ np.full(5, 3) #Create a 1d array with 5 elements, all of which are 3
 
 
 ```python
-np.full(5, range(5)) #Create a 1d array with 5 elements, filling them with the values 0 to 4
+# Create a 1d array with 5 elements, filling them with the values 0 to 4
+np.full(5, range(5)) 
 ```
 
 
@@ -416,8 +432,8 @@ np.full(5, range(5)) #Create a 1d array with 5 elements, filling them with the v
 
 
 ```python
-#Sadly this trick won't work for multidimensional arrays
-np.full([2,5], range(10))
+# Sadly this trick won't work for multidimensional arrays
+np.full([2, 5], range(10))
 ```
 
 
@@ -425,17 +441,17 @@ np.full([2,5], range(10))
 
     ValueError                                Traceback (most recent call last)
 
-    <ipython-input-24-4dfd668a5ec0> in <module>()
-          1 #Sadly this trick won't work for multidimensional arrays
-    ----> 2 np.full([2,5], range(10))
+    <ipython-input-24-ea647ac42aad> in <module>
+          1 # Sadly this trick won't work for multidimensional arrays
+    ----> 2 np.full([2, 5], range(10))
     
 
-    ~/anaconda3/lib/python3.6/site-packages/numpy/core/numeric.py in full(shape, fill_value, dtype, order)
-        297         dtype = array(fill_value).dtype
-        298     a = empty(shape, dtype, order)
-    --> 299     multiarray.copyto(a, fill_value, casting='unsafe')
-        300     return a
-        301 
+    //anaconda3/lib/python3.7/site-packages/numpy/core/numeric.py in full(shape, fill_value, dtype, order)
+        334         dtype = array(fill_value).dtype
+        335     a = empty(shape, dtype, order)
+    --> 336     multiarray.copyto(a, fill_value, casting='unsafe')
+        337     return a
+        338 
 
 
     ValueError: could not broadcast input array from shape (10) into shape (2,5)
@@ -443,7 +459,8 @@ np.full([2,5], range(10))
 
 
 ```python
-np.full([2,5], np.pi) #NumPy also has useful built-in mathematical numbers
+# NumPy also has useful built-in mathematical numbers
+np.full([2, 5], np.pi) 
 ```
 
 
@@ -460,7 +477,7 @@ You can subset NumPy arrays very similarly to list slicing in python.
 
 
 ```python
-x = np.array([[1,2,3], [4,5,6], [7,8,9], [10,11,12]])
+x = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]])
 print(x.shape)
 x
 ```
@@ -480,7 +497,8 @@ x
 
 
 ```python
-x[0] #Retrieving the first row
+# Retrieving the first row
+x[0] 
 ```
 
 
@@ -492,7 +510,8 @@ x[0] #Retrieving the first row
 
 
 ```python
-x[1:] #Retrieving all rows after the first row
+# Retrieving all rows after the first row
+x[1:] 
 ```
 
 
@@ -508,7 +527,8 @@ x[1:] #Retrieving all rows after the first row
 
 
 ```python
-x[:,0] #All rows, column 0
+# All rows, column 0
+x[:,0] 
 ```
 
 
@@ -520,7 +540,8 @@ x[:,0] #All rows, column 0
 
 
 ```python
-x[2:4,1:3] #Rows 2 through 4, columns 1 through 3
+# Rows 2 through 4, columns 1 through 3
+x[2:4,1:3] 
 ```
 
 
@@ -535,7 +556,7 @@ x[2:4,1:3] #Rows 2 through 4, columns 1 through 3
 
 
 ```python
-x = [[1,2,3], [4,5,6], [7,8,9], [10,11,12]]
+x = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]]
 x
 ```
 
@@ -568,7 +589,7 @@ x[:,0]
 
     TypeError                                 Traceback (most recent call last)
 
-    <ipython-input-33-879a04ce8a40> in <module>()
+    <ipython-input-33-879a04ce8a40> in <module>
     ----> 1 x[:,0]
     
 
@@ -577,7 +598,7 @@ x[:,0]
 
 
 ```python
-#To slice along a second dimension with lists we must verbosely use a list comprehension
+# To slice along a second dimension with lists we must verbosely use a list comprehension
 [i[0] for i in x]
 ```
 
@@ -590,7 +611,7 @@ x[:,0]
 
 
 ```python
-#Doing this in multiple dimensions with lists
+# Doing this in multiple dimensions with lists
 [i[1:3] for i in x[2:4]]
 ```
 
@@ -605,7 +626,7 @@ x[:,0]
 
 
 ```python
-#With an array
+# With an array
 x = np.array([
               [[1,2,3], [4,5,6]],
               [[7,8,9], [10,11,12]]
