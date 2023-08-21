@@ -1,4 +1,3 @@
-
 # Getting Started with NumPy
 
 ## Introduction
@@ -273,7 +272,7 @@ y
 
 
 ### We can also have higher dimensional data such as working with 3 dimensional data
-<img src="images/Image_195_3D array.png" width=500>
+<img src="https://curriculum-content.s3.amazonaws.com/data-science/images/Image_195_3D array.png" width=500>
 
 
 ```python
